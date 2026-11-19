@@ -88,6 +88,8 @@ python scripts/check.py jobs/<id>/edits/clip_2.mp4 --campaign campaigns.md
 python scripts/live.py "https://www.youtube.com/watch?v=<live>" --minutes 60
 ```
 
+Completed YouTube livestreams can be used as VOD input to `moments.py`. For videos longer than 90 minutes, the default processes the first 90 minutes when the source duration is available; use `--max-minutes` to change that limit. Verify that the selected campaign permits the source and creator before clipping.
+
 Windows, macOS or Linux, Python 3.10+. An NVIDIA GPU makes transcription faster; on the CPU a 12-minute video takes about 5 minutes.
 
 MIT license.

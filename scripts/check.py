@@ -84,8 +84,9 @@ def main():
     for n, ok, d in res:
         print(f"{'PASS' if ok else 'FAIL'}  {n}" + (f"  [{d}]" if d else ""))
     bad = [r for r in res if not r[1]]
-    print("RESULT: " + ("FAIL" if bad else "PASS"))
-    sys.exit(1 if bad else 0)
+    print("Campaign rules require manual verification for the selected campaign; this parser cannot select a campaign.")
+    print("RESULT: " + ("FAIL" if bad else "INCOMPLETE"))
+    sys.exit(1 if bad else 2)
 
 
 if __name__ == "__main__":

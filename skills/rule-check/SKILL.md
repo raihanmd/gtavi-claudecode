@@ -9,7 +9,7 @@ Run:
 
 `python "${CLAUDE_PLUGIN_ROOT}/scripts/check.py" <clip.mp4> --campaign campaigns.md`
 
-It checks: length, 1080x1920, audio present, the campaign's rules from `campaigns.md`, and banned content (leaks, "play early", piracy).
+The script checks technical properties and limited caption keywords. Its campaign parser searches the whole file and cannot reliably select one campaign. Do not treat its PASS as campaign approval. Select the exact campaign and check its sourced rules manually; flag missing or ambiguous rules as UNKNOWN. Verify permitted creator, platform, duration, credit, hashtags, deadline and submission separately. Do not approve a clip when a required rule is unknown.
 
 Then:
 
